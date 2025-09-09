@@ -24,7 +24,7 @@ function FileUploader() {
         formData.append("file", file) // this is what we send to backend
 
         try {
-            const modelResult = await axios.post("http://127.0.0.1:8000/predict", formData, {
+            const modelResult = await axios.post("https://tag-classifier-backend.onrender.com/predict", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
